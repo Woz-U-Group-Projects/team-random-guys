@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ColorCodedGraphComponent } from './color-coded-graph/color-coded-graph.component';
+import { TimeSelectionComponent } from './time-selection/time-selection.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColorCodedGraphComponent,
+    TimeSelectionComponent
   ],
   imports: [
     BrowserModule,
