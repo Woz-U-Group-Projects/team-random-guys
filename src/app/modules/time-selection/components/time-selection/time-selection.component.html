@@ -1,0 +1,13 @@
+<body>
+  <div class="columns">
+      <div class="column" *ngFor="let w of week">
+        {{w.day}}
+            <div *ngFor="let day of w.days">
+              <button [ngClass]="day.selected?'active':''" (click)="toggleActive(w.day,day.hour)">{{day.hour}}</button>
+            </div>
+      </div>
+  </div>
+  <button>Save</button>
+    </body>
+  
+  

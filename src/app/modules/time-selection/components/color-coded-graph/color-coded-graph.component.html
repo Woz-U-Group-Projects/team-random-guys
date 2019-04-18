@@ -1,0 +1,12 @@
+<button (click)="attend(1)">test</button>
+
+<div class="container" *ngFor="let hour of timeSelection">
+  <div class="columns">
+    <div class="column"> {{ hour.hour }} </div>
+    <div class="column">
+      <a class="button is-small is-fullwidth {{ colorCoded(percentage(hour.peopleTotal, hour.canAttend)) }}"> {{ hour.canAttend }} / {{ hour.peopleTotal }} </a>
+      <!-- {{colorCoded(percentage(hour.peopleTotal, hour.canAttend))}} 
+      {{percentage(hour.peopleTotal, hour.canAttend)}} -->
+    </div>
+  </div>
+</div>
