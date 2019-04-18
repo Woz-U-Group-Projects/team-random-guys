@@ -20,7 +20,7 @@ export class ColorCodedGraphComponent implements OnInit {
     this.dataService.getTimes().subscribe(timeSelection => this.timeSelection = timeSelection);
   }
 
-  percentage(total, canAttend) {
+  percentage(canAttend, total) {
     return canAttend / total
   }
 
@@ -39,8 +39,5 @@ export class ColorCodedGraphComponent implements OnInit {
     }
   }
 
-  attend(hour){
-    this.dataService.updateAttendance(hour);
-  }
 
 }
