@@ -23,3 +23,5 @@ describe('TimeSelectionComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+export { TimeSelectionComponent}
