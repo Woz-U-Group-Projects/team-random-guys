@@ -34,7 +34,7 @@ export class ColorCodedGraphComponent implements OnInit {
       } else if (percent >= 0.5) {
         return color = "red"
       } else {
-        return color="white"
+        return color = "white"
       }
     }
   }
