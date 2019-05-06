@@ -6,12 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { TimeSelectionModule } from './modules/time-selection/time-selection.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 
-<<<<<<< HEAD
-=======
-
 import { AppComponent } from './app.component';
 
->>>>>>> 61c0e5531e45d1c36f4fa80971b8d4b62c3f7ca4
 @NgModule({
   declarations: [
     AppComponent
@@ -21,7 +17,6 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     TimeSelectionModule,
     DashboardModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
