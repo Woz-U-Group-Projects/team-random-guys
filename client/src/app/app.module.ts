@@ -7,10 +7,13 @@ import { TimeSelectionModule } from './modules/time-selection/time-selection.mod
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 import { AppComponent } from './app.component';
+import { LoginPageComponent } from './modules/login-page/login-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginPageComponent,
+
   ],
   imports: [
     BrowserModule,

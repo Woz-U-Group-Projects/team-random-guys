@@ -134,6 +134,133 @@
           }
         }
       }
+    },
+    "login-page": {
+      "root": "projects/login-page/",
+      "sourceRoot": "projects/login-page/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/login-page",
+            "index": "projects/login-page/src/index.html",
+            "main": "projects/login-page/src/main.ts",
+            "polyfills": "projects/login-page/src/polyfills.ts",
+            "tsConfig": "projects/login-page/tsconfig.app.json",
+            "assets": [
+              "projects/login-page/src/favicon.ico",
+              "projects/login-page/src/assets"
+            ],
+            "styles": [
+              "projects/login-page/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/login-page/src/environments/environment.ts",
+                  "with": "projects/login-page/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "login-page:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "login-page:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "login-page:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/login-page/src/test.ts",
+            "polyfills": "projects/login-page/src/polyfills.ts",
+            "tsConfig": "projects/login-page/tsconfig.spec.json",
+            "karmaConfig": "projects/login-page/karma.conf.js",
+            "styles": [
+              "projects/login-page/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/login-page/src/favicon.ico",
+              "projects/login-page/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/login-page/tsconfig.app.json",
+              "projects/login-page/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "login-page-e2e": {
+      "root": "projects/login-page-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/login-page-e2e/protractor.conf.js",
+            "devServerTarget": "login-page:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "login-page:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/login-page-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "Schedule-Pro"
