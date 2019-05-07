@@ -1,24 +1,28 @@
-<div class="flexbox-parent">
-  <div layout="row" layout-align="center center" style="min-height: 500px">
-    
-    <form action="/users" method="POST" display="is-flex">
-      <p>Sign Up</p>
-      <div>
-          <label for="name"></label>
-          <input type="text" name="username" placeholder="Username">
-      </div>
-      <div>
-          <label for="name"></label>
-          <input type="text" name="email" placeholder="Email">
-      </div>
-      <div>
-          <label for="name"></label>
-          <input type="text" name="password" placeholder="Password">
-      </div>
-      <div>
-          <button type="submit">Submit</button>
-      </div>
-    </form>
+<form action="/users" method="POST" display="is-flex">
+  
+  <p>Sign Up</p>
 
+  <div>
+    <label for="user"></label>
+    <input type="text" name="firstName" placeholder="First Name">
   </div>
-</div>
+  <div>
+    <label for="user"></label>
+    <input type="text" name="lastName" placeholder="Last Name">
+  </div>
+  <div>
+      <label for="user"></label>
+      <input type="text" name="username" placeholder="Username">
+  </div>
+  <div>
+      <label for="user"></label>
+      <input type="text" name="email" placeholder="Email">
+  </div>
+  <div>
+      <label for="user"></label>
+      <input type="text" name="password" placeholder="Password">
+  </div>
+  <div>
+      <button type="submit">Submit</button>
+  </div>
+</form>
