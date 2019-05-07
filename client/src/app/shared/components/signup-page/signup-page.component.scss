@@ -1,12 +1,12 @@
 body {
-    background-color: rgb(52, 102, 168);    
+    background-color: rgb(52, 102, 168);
     font-family: 'Oswald', sans-serif;
-
+    line-height: 1.8;
     
 }
 .flexbox-parent {
     display: flex;
-    margin: 100px 20%;
+    margin: 100px 20% 1px;
     justify-content: space-around;
 }
 h1 {
@@ -14,10 +14,10 @@ h1 {
 }
 .submit {
     text-align: center;
-} 
+}
 button:hover {
     background-color: rgb(217, 0, 255);
-    color: rgba(0, 0, 0, 0.856);;
+    color: rgba(0, 0, 0, 0.856);
 }
 .bottom-text {
     text-align: center;

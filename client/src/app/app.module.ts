@@ -8,11 +8,13 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './shared/components/login-page/login-page.component';
+import { SignupPageComponent } from './components/signup-page/signup-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
+    SignupPageComponent,
 
   ],
   imports: [

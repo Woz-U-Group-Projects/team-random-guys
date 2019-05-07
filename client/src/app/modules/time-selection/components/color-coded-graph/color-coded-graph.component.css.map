@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,GAAG;CACX;;AAED,AAAA,MAAM,CAAC;EACL,gBAAgB,EAAE,OAAO;CAC1B;;AAED,AAAA,OAAO,CAAC;EACN,gBAAgB,EAAE,OAAO;CAC1B;;AAED,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,OAAO;CAC1B",
+    "sources": [
+        "color-coded-graph.component.scss"
+    ],
+    "names": [],
+    "file": "color-coded-graph.component.css"
+}

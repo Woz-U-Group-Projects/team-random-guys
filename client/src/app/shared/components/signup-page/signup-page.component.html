@@ -1,0 +1,43 @@
+<head>
+  <link rel="stylesheet" href="signup-page.component.scss">
+</head>
+<body>
+<div class="flexbox-parent">
+  <div layout="row" layout-align="center center" style="min-height: 500px">
+    
+    <form action="/users" method="POST" display="is-flex">
+      <h1>Sign Up</h1>
+      <div class = 'firstName'>
+          <label for="name"></label>
+          <input type="text" name="firstName" placeholder="First Name">
+      </div>
+      <div class = 'lastName'><br>
+          <label for="name"></label>
+          <input type="text" name="lastName" placeholder="Last Name">
+      </div>
+      <div class = 'username'><br>
+          <label for="name"></label>
+          <input type="text" name="username" placeholder="Username">
+      </div>
+      <div class = 'email'><br>
+        <label for="name"></label>
+        <input type="text" name="email" placeholder="Email">
+    </div>
+    <div class = 'password'><br>
+      <label for="name"></label>
+      <input type="text" name="password" placeholder="Password">
+  </div>
+      <div class = 'submit'><br>
+          <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<footer>
+<p class="bottom-text">
+  By clicking the Sign Up button, you agree to our
+  Terms & Conditions and
+  Privacy Policy.
+</p>
+</footer>
+</body>

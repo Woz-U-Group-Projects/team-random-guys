@@ -1,0 +1,16 @@
+.container {
+  width: 70%;
+}
+
+.green {
+  background-color: #365902;
+}
+
+.yellow {
+  background-color: #F2B705;
+}
+
+.red {
+  background-color: #D90404;
+}
+/*# sourceMappingURL=color-coded-graph.component.css.map */

@@ -1,24 +1,35 @@
+<head>
+  <link rel="stylesheet" href="login-page.component.scss">
+</head>
+<body>
 <div class="flexbox-parent">
   <div layout="row" layout-align="center center" style="min-height: 500px">
     
     <form action="/users" method="POST" display="is-flex">
-      <p>Sign Up</p>
-      <div>
+      <h1>Login</h1>
+      <div class = 'username'>
           <label for="name"></label>
           <input type="text" name="username" placeholder="Username">
       </div>
-      <div>
+      <div class = 'email'><br>
           <label for="name"></label>
           <input type="text" name="email" placeholder="Email">
       </div>
-      <div>
+      <div class = 'password'><br>
           <label for="name"></label>
           <input type="text" name="password" placeholder="Password">
       </div>
-      <div>
-          <button type="submit">Submit</button>
+      <div class = 'submit'><br>
+          <button type="submit">Login</button>
       </div>
     </form>
-
   </div>
 </div>
+<footer>
+  <p class="bottom-text">
+    By clicking the Sign Up button, you agree to our
+    Terms & Conditions and
+    Privacy Policy.
+  </p>
+  </footer>
+</body>
