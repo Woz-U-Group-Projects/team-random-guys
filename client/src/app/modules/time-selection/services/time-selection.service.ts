@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 import { TimeSelection } from '../../../shared/models/time-selection';
 
@@ -8,15 +9,31 @@ import { TimeSelection } from '../../../shared/models/time-selection';
 })
 export class TimeSelectionService {
 
-  constructor() { }
+  uri = 'http://localhost:3001';
 
+  constructor(private http: HttpClient) { }
+
+  getTime() {
+    return this.http.get(`${this.uri}/times`);
+  }
+  getTimeById(id) {
+    return this.http.get(`${this.uri}/times/${id}`);
+  }
+
+  updateTime(hour, peopleTotal, canAttend) {
+    const time = {
+      hour: hour,
+      peopleTotal: peopleTotal,
+      canAttend: canAttend
+    };
+    return this.http.put(`${this.uri}/times/add`, time);
+  }
 
   calendars = [];
  
   addCalendar(cal){    
     this.calendars.push(cal);
   }
-
 
   calculate() {
     let a = this.calendars[0];    
