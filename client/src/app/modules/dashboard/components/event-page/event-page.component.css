@@ -1,0 +1,25 @@
+body {
+  background-color: #3466a8;
+  font-family: 'Oswald', sans-serif;
+}
+
+.flexbox-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 100px 20%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  background-color: #f37c7c;
+}
+
+.create {
+  text-align: center;
+}
+
+button:hover {
+  background-color: #d900ff;
+  color: rgba(0, 0, 0, 0.856);
+}
+/*# sourceMappingURL=event-page.component.css.map */

@@ -5,36 +5,39 @@
 <div class="flexbox-parent">
   <div layout="row" layout-align="center center" style="min-height: 500px">
     
-    <form action="/users" method="POST" display="is-flex">
+    <form (submit)="onSignUpSubmit()" display="is-flex">
       <h1>Sign Up</h1>
       <div class = 'firstName'>
           <label for="name"></label>
-          <input type="text" name="firstName" placeholder="First Name">
+          <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name">
       </div>
       <div class = 'lastName'><br>
           <label for="name"></label>
-          <input type="text" name="lastName" placeholder="Last Name">
+          <input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name">
       </div>
       <div class = 'username'><br>
           <label for="name"></label>
-          <input type="text" name="username" placeholder="Username">
+          <input type="text" [(ngModel)]="userName" name="userName" placeholder="Username">
       </div>
       <div class = 'email'><br>
         <label for="name"></label>
-        <input type="text" name="email" placeholder="Email">
+        <input type="text" [(ngModel)]="email" name="email" placeholder="Email">
     </div>
     <div class = 'password'><br>
       <label for="name"></label>
-      <input type="text" name="password" placeholder="Password">
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Password">
   </div>
       <div class = 'submit'><br>
           <button type="submit">Submit</button>
       </div>
     </form>
+    <div [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact: true}">
+      <a [routerLink]="['/login']">Login</a>
+    </div>
   </div>
 </div>
 <footer>
-<p class="bottom-text">
+<p class="bottom-text"> 
   By clicking the Sign Up button, you agree to our
   Terms & Conditions and
   Privacy Policy.
