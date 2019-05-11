@@ -1,46 +1,49 @@
 <head>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 </head>
+
 <body>
-<div class="flexbox-parent">
-  <div layout="row" layout-align="center center" style="min-height: 500px">
-    
-    <form (submit)="onSignUpSubmit()" display="is-flex">
-      <h1>Sign Up</h1>
-      <div class = 'firstName'>
+  <div class="flexbox-parent">
+    <div layout="row" layout-align="center center" style="min-height: 500px">
+
+      <form (submit)="onSignUpSubmit()" display="is-flex">
+        <h1>Sign Up</h1>
+        <div class='firstName'>
           <label for="name"></label>
           <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name">
-      </div>
-      <div class = 'lastName'><br>
+        </div>
+        <div class='lastName'><br>
           <label for="name"></label>
           <input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name">
-      </div>
-      <div class = 'username'><br>
+        </div>
+        <div class='username'><br>
           <label for="name"></label>
           <input type="text" [(ngModel)]="userName" name="userName" placeholder="Username">
-      </div>
-      <div class = 'email'><br>
-        <label for="name"></label>
-        <input type="text" [(ngModel)]="email" name="email" placeholder="Email">
-    </div>
-    <div class = 'password'><br>
-      <label for="name"></label>
-      <input type="password" [(ngModel)]="password" name="password" placeholder="Password">
-  </div>
-      <div class = 'submit'><br>
+        </div>
+        <div class='email'><br>
+          <label for="name"></label>
+          <input type="text" [(ngModel)]="email" name="email" placeholder="Email">
+        </div>
+        <div class='password'><br>
+          <label for="name"></label>
+          <input type="password" [(ngModel)]="password" name="password" placeholder="Password">
+        </div>
+        <div class='submit'><br>
           <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <a [routerLink]="['/login']">Login</a>
       </div>
-    </form>
-    <div [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact: true}">
-      <a [routerLink]="['/login']">Login</a>
     </div>
   </div>
-</div>
-<footer>
-<p class="bottom-text"> 
-  By clicking the Sign Up button, you agree to our
-  Terms & Conditions and
-  Privacy Policy.
-</p>
-</footer>
+  <footer>
+    <p class="bottom-text">
+      By clicking the Sign Up button, you agree to our
+      Terms & Conditions and
+      Privacy Policy.
+    </p>
+  </footer>
 </body>
