@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { map, filter, switchMap } from "rxjs/operators"; 
+import { map } from "rxjs/operators"; 
 
 @Injectable({
   providedIn: 'root'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,6 +12,14 @@
 
     <a role="button" (click)="toggleMenu()" class="navbar-burger burger {{menuOpen?'is-active':''}}" aria-label="menu"
       aria-expanded="false" data-target="navbarBasicExample">
+=======
+<nav class="navbar has-background-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/dashboard">
+      <h1>SP</h1>
+    </a>
+    <a role="button" (click)="toggleMenu()" class="navbar-burger burger {{menuOpen?'is-active':''}}" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+>>>>>>> 705ccff9f32f7cccec2c839101f392987d3abcb9
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -18,13 +27,19 @@
   </div>
 
   <div id="navbarBasicExample" class="navbar-menu {{menuOpen?'is-active':''}}">
-
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
+<<<<<<< HEAD
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png">
           <i class="far fa-bell"></i>
           <div class="navbar-item has-dropdown is-hoverable">
+=======
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact: true}" >
+              <a [routerLink]="['/profile']">Profile</a>
+            </div>
+>>>>>>> 705ccff9f32f7cccec2c839101f392987d3abcb9
             <a class="navbar-item" (click)="onLogoutClick()" href="#">
               Log out
             </a>

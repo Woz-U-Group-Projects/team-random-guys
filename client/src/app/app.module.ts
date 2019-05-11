@@ -12,16 +12,18 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './shared/components/login-page/login-page.component';
 import { SignupPageComponent } from './shared/components/signup-page/signup-page.component';
-
+import { EventDetailComponent } from './event-detail/event-detail.component';
+//import { EventPageComponent } from './components/event-page/event-page.component';
 
 import { AccountService } from './services/account.service';
 import { AuthService } from './services/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    SignupPageComponent
-
+    SignupPageComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,10 @@ import { AuthService } from './services/auth.service';
     FlashMessagesModule.forRoot(),
     HttpModule
   ],
-  providers: [AccountService, AuthService],
+  providers: [
+    AccountService, 
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
