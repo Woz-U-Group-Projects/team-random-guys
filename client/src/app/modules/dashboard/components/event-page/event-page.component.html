@@ -1,25 +1,28 @@
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="event-page.component.scss">
 </head>
+
 <body>
-<div class="flexbox-parent">
-  <div layout="row" layout-align="center center" style="min-height: 500px">
-    
-    <form action="/event" method="POST" display="is-flex">
-      <h1>Create your event!</h1>
-      <div class = 'title'>
+  <div class="flexbox-parent">
+    <div layout="row" layout-align="center center" style="min-height: 500px">
+
+      <form action="/event" method="POST" display="is-flex">
+        <h1>Create your event!</h1>
+        <div class='title'>
           <h3>Title:</h3><label for="title"></label>
           <input type="text" name="title">
-      </div>
-      <div class = 'description'><br>
-        <h3>
-          Description:</h3><label for="description"></label>
-          <textarea rows="10" cols="50"> 
+        </div>
+        <div class='description'><br>
+          <h3>
+            Description:</h3><label for="description"></label>
+          <textarea rows="10" cols="50">
               </textarea>
-      </div>
-      <div class = 'time'><br>
-        <h3>Time:</h3><label for="time"></label>
-        <select>
+        </div>
+        <div class='time'><br>
+          <h3>Time:</h3><label for="time"></label>
+          <select>
             <option value="12am">12:00AM</option>
             <option value="1230am">12:30AM</option>
             <option value="1am">1:00AM</option>
@@ -71,16 +74,16 @@
 
 
           </select>
-      </div>
-      <div class = 'invite'><br>
-        <h3>Invite:</h3><label for="invite"></label>
-        <input type="text" name="invite" >
-    </div>
-      <div class = 'create'><br>
+        </div>
+        <div class='invite'><br>
+          <h3>Invite:</h3><label for="invite"></label>
+          <input type="text" name="invite">
+        </div>
+        <div class='create'><br>
           <button type="create">Create</button>
-      </div>
-    </form>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
-<footer>
+  <footer>
 </body>
