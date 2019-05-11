@@ -9,6 +9,7 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './shared/components/login-page/login-page.component';
 import { SignupPageComponent } from './shared/components/signup-page/signup-page.component';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 //import { EventPageComponent } from './components/event-page/event-page.component';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SignupPageComponent } from './shared/components/signup-page/signup-page
     AppComponent,
     LoginPageComponent,
     SignupPageComponent,
+    EventDetailComponent,
     //EventPageComponent,
 
   ],
