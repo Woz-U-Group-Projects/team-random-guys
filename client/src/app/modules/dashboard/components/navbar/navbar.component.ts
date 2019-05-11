@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FlashMessagesService } from "angular2-flash-messages"
 
+import { FlashMessagesService } from "angular2-flash-messages"
 import { AuthService } from '../../../../services/auth.service';;
 
 @Component({
@@ -10,7 +10,6 @@ import { AuthService } from '../../../../services/auth.service';;
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
   menuOpen = false;
 
   toggleMenu() {
@@ -24,8 +23,7 @@ export class NavbarComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onLogoutClick(){
     this.authService.logout();

@@ -33,7 +33,10 @@ import { AuthService } from './services/auth.service';
     FlashMessagesModule.forRoot(),
     HttpModule
   ],
-  providers: [AccountService, AuthService],
+  providers: [
+    AccountService, 
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
