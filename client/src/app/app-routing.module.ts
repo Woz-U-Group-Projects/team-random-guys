@@ -5,7 +5,7 @@ import { LoginPageComponent } from './shared/components/login-page/login-page.co
 import { SignupPageComponent } from './shared/components/signup-page/signup-page.component';
 import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
 import { ProfileComponent } from './modules/dashboard/components/profile/profile.component';
-import { EventDetailComponent } from './event-detail/event-detail.component'
+import { EventDetailComponent } from './modules/dashboard/components/event-detail/event-detail.component'
 
 
 const routes: Routes = [

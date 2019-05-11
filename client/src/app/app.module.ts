@@ -6,14 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { HttpModule } from '@angular/http'
 
-import { TimeSelectionModule } from './modules/time-selection/time-selection.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './shared/components/login-page/login-page.component';
 import { SignupPageComponent } from './shared/components/signup-page/signup-page.component';
-import { EventDetailComponent } from './event-detail/event-detail.component';
-//import { EventPageComponent } from './components/event-page/event-page.component';
 
 import { AccountService } from './services/account.service';
 import { AuthService } from './services/auth.service';
@@ -22,13 +19,11 @@ import { AuthService } from './services/auth.service';
   declarations: [
     AppComponent,
     LoginPageComponent,
-    SignupPageComponent,
-    EventDetailComponent
+    SignupPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TimeSelectionModule,
     DashboardModule,
     HttpClientModule,
     FormsModule,
