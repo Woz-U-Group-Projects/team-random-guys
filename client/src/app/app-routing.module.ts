@@ -6,6 +6,7 @@ import { SignupPageComponent } from './shared/components/signup-page/signup-page
 import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
 import { ProfileComponent } from './modules/dashboard/components/profile/profile.component';
 import { EventDetailComponent } from './modules/dashboard/components/event-detail/event-detail.component'
+import { EventPageComponent } from './modules/dashboard/components/event-page/event-page.component';
 
 
 const routes: Routes = [
@@ -14,10 +15,13 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'profile', component: ProfileComponent},
-  { path: 'eventdetail', component: EventDetailComponent }
+  { path: 'eventdetail', component: EventDetailComponent },
 ];
 
 @NgModule({
+  declarations: [
+    EventPageComponent,
+  ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
