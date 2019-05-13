@@ -1,14 +1,25 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 var bcrypt = require('bcryptjs');
+const Schema = mongoose.Schema;
 
-var Schema = mongoose.Schema;
+const InviteSchema = new Schema({
+  userName: { type: String }
+})
 
-var UserSchema = new Schema({
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  userName: { type: String, required: true },
-  email: { type: String, required: true },
-  password: { type: String, required: true }
+const EventSchema = new Schema({
+  title: { type: String },
+  description: { type: String },
+  time: { type: String },
+  invites: { type: [InviteSchema] }
+});
+
+const UserSchema = new Schema({
+  firstName: { type: String },
+  lastName: { type: String },
+  userName: { type: String, unique: true },
+  email: { type: String },
+  password: { type: String },
+  events: { type: [EventSchema] }
 });
 
 const User = module.exports = mongoose.model("User", UserSchema);

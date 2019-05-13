@@ -1,6 +1,4 @@
-const createError = require("http-errors");
 const express = require('express');
-const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -11,6 +9,7 @@ const mongoose = require("mongoose");
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const dashboardRouter = require('./routes/dashboard');
 
 const app = express();
 
@@ -29,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors());
@@ -37,6 +37,7 @@ require('./config/passport')(passport);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/dashboard', dashboardRouter)
 
 mongoose.connect(config.database, { useNewUrlParser: true });
 const db = mongoose.connection;

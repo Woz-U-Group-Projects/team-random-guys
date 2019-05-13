@@ -1,0 +1,20 @@
+POST http://localhost:3000/dashboard/events 
+
+{
+  "userId" : "RickyMed.id",
+  "title": "Pool Party",
+  "description": "At FAasgag",
+  "time": "2:00 PM",
+}
+
+###
+
+POST http://localhost:3000/users/signup
+
+{
+  "firstName": "Ricardo",
+  "lastName": "Gonzalez",
+  "userName": "RickyMed",
+  "email": "ricky19808@gmail.com",
+  "password": "password",
+}
